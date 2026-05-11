@@ -1,175 +1,162 @@
-export default function LoveStoryWebsite() {
-  const sections = [
-    {
-      text: "Quiero que recuerdes esas salidas cuando teníamos poco pero algo que jamás ha faltado en nuestra relación: amor y confianza desde el primer día.",
-      image: "images/image24.jpg",
-    },
-    {
-      text: "Amor cómo estas? Sé que estas un poco cansada y a veces no quieres ni verme en pintura, pero quiero contarte algo y que no olvides como empezamos",
-      image: "images/image2.jpg",
-    },
-    {
-      text: "Quiero que recuerdes esas salidas cuando teníamos poco pero algo que jamás ha faltado en nuestra relación: amor y confianza desde el primer día.",
-      image: "images/image2.jpg",
-    },
-    {
-      text: "Recuerda que empezamos a viajar y conocer juntos cosas nuevas.",
-      image: "images/image15.jpg",
-    },
-    {
-      text: "Y sin pensarlo, luego permitiste que fuéramos no 1 ni 2 sino 3.",
-      image: "images/image9.jpg",
-    },
-    {
-      text: "Y recuerda cómo poco a poco salimos un poco más lejos, y más lejos.",
-      image: "images/image5.jpg",
-    },
-    {
-      text: "Un día empezamos a soñar juntos con muchos planes y nuevas cosas en nuestras vidas.",
-      image: "images/image14.jpg",
-    },
-    {
-      text: "En un abrir y cerrar de ojos, estábamos esperando a nuestra hermosa bebé.",
-      image: "images/image7.jpg",
-    },
-    {
-      text: "Continuamos nuestro camino como familia con sueños y creciendo en todos los aspectos.",
-      image: "images/image8.jpg",
-    },
-    {
-      text: "Somos tú y yo… pero lo más importante, nuestros niños… la razón de ser de nosotros.",
-      image: "images/image23.jpg",
-    },
-    {
-      text: "No olvides para dónde vamos, un paso a la vez… lograremos todo en el tiempo de Dios.",
-      image: "images/image17.jpg",
-    },
-    {
-      text: "Pero mientras tanto vivamos el hoy felices y unidos. Te amo con mi vida a ti y a nuestros niños.",
-      image: "images/image13.jpg",
-    },
-    {
-      text: "Eres la mejor madre y esposa del mundo, amor mío… Feliz Día de la Madre ❤️",
-      image: "images/image11.jpg",
-    },
-  ];
-
-  return (
-    <div className="bg-[#f5e6d3] text-white overflow-x-hidden">
-      {/* HERO */}
-      <section
-        className="relative h-screen flex items-center justify-center text-center bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2070&auto=format&fit=crop')",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/50"></div>
-
-        <div className="relative z-10 px-6 max-w-4xl animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 drop-shadow-2xl">
-            Para el amor de mi vida
-          </h1>
-
-          <p className="text-xl md:text-2xl leading-relaxed mb-10 text-white/90">
-            Un pequeño recorrido de nuestra historia, nuestros sueños y la hermosa familia que Dios nos regaló.
-          </p>
-
-          <img
-            src="images/image24.jpg"
-            alt="inicio"
-            className="mx-auto rounded-3xl shadow-2xl w-full max-w-2xl border-4 border-white/40"
-          />
-        </div>
-      </section>
-
-      {/* STORY SECTIONS */}
-      <div className="relative">
-        {sections.map((section, index) => (
-          <section
-            key={index}
-            className="min-h-screen flex items-center justify-center px-6 py-20"
-          >
-            <div
-              className={`
-                max-w-6xl w-full grid md:grid-cols-2 gap-10 items-center
-                ${index % 2 === 0 ? "md:grid-flow-col" : "md:grid-flow-col-dense"}
-              `}
-            >
-              <div
-                className={`transition-all duration-1000 opacity-100 translate-y-0 ${
-                  index % 2 === 0 ? "md:order-1" : "md:order-2"
-                }`}
-              >
-                <img
-                  src={section.image}
-                  alt="recuerdo"
-                  className="rounded-[30px] shadow-2xl w-full object-cover border-4 border-white/20 hover:scale-[1.02] transition duration-500"
-                />
-              </div>
-
-              <div
-                className={`backdrop-blur-md bg-white/10 rounded-[30px] p-8 shadow-2xl border border-white/20 ${
-                  index % 2 === 0 ? "md:order-2" : "md:order-1"
-                }`}
-              >
-                <p className="text-2xl md:text-4xl font-light leading-relaxed text-white drop-shadow-lg">
-                  {section.text}
-                </p>
-              </div>
-            </div>
-          </section>
-        ))}
-      </div>
-
-      {/* FINAL */}
-      <section
-        className="relative h-screen flex items-center justify-center text-center bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1493558103817-58b2924bce98?q=80&w=1974&auto=format&fit=crop')",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
-
-        <div className="relative z-10 px-6 max-w-4xl">
-          <h2 className="text-5xl md:text-7xl font-bold mb-8">
-            Te amo infinitamente ❤️
-          </h2>
-
-          <p className="text-2xl md:text-3xl text-white/90 leading-relaxed">
-            Gracias por cada momento, cada sueño y cada paso que hemos dado juntos.
-          </p>
-        </div>
-      </section>
-
-      <style>{`
-        html {
-          scroll-behavior: smooth;
-        }
-
-        body {
-          margin: 0;
-          padding: 0;
-          font-family: 'Poppins', sans-serif;
-          background: #f5e6d3;
-        }
-
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .animate-fade-in {
-          animation: fadeIn 2s ease forwards;
-        }
-      `}</style>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Para el amor de mi vida</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Poppins',sans-serif;color:#fff;background:#0f3540;overflow-x:hidden}
+    .beach-bg{position:fixed;inset:0;background:linear-gradient(180deg,rgba(10,58,80,.55),rgba(248,181,103,.35),rgba(8,42,58,.75)),url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;z-index:-3}
+    .beach-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 15%,rgba(255,255,255,.2),transparent 35%),linear-gradient(90deg,rgba(255,255,255,.07),transparent,rgba(255,255,255,.07));}
+    .waves{position:fixed;left:0;right:0;bottom:0;height:170px;z-index:-2;background:linear-gradient(180deg,transparent,rgba(255,255,255,.26));filter:blur(.2px)}
+    .waves::before{content:"";position:absolute;left:-10%;right:-10%;bottom:20px;height:90px;background:rgba(255,255,255,.28);border-radius:50% 50% 0 0/100% 100% 0 0;animation:wave 7s ease-in-out infinite alternate}
+    @keyframes wave{from{transform:translateX(-25px)}to{transform:translateX(25px)}}
+    .hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:40px 18px}
+    .hero-card{max-width:980px;padding:28px;border:1px solid rgba(255,255,255,.30);background:rgba(0,0,0,.32);backdrop-filter:blur(10px);border-radius:34px;box-shadow:0 24px 70px rgba(0,0,0,.35)}
+    h1{font-family:'Great Vibes',cursive;font-size:clamp(4rem,11vw,9rem);line-height:.9;margin:0 0 12px;text-shadow:0 8px 25px rgba(0,0,0,.45)}
+    .subtitle{font-size:clamp(1.05rem,2.3vw,1.55rem);max-width:760px;margin:0 auto 24px;line-height:1.65;color:#fff7e8}
+    .hero img{width:min(760px,100%);max-height:58vh;object-fit:cover;border-radius:28px;border:6px solid rgba(255,255,255,.55);box-shadow:0 25px 60px rgba(0,0,0,.45)}
+    .story{min-height:100vh;width:min(1180px,100%);margin:auto;display:grid;grid-template-columns:1.04fr .96fr;gap:46px;align-items:center;padding:82px 28px}
+    .story.reverse{grid-template-columns:.96fr 1.04fr}
+    .story.reverse .photo-wrap{order:2}
+    .story.reverse .message{order:1}
+    .photo-wrap{position:relative}
+    .photo-wrap::before{content:"";position:absolute;inset:-12px;border-radius:34px;background:linear-gradient(135deg,rgba(255,255,255,.75),rgba(255,205,129,.24));z-index:-1;transform:rotate(-1.5deg)}
+    .story.reverse .photo-wrap::before{transform:rotate(1.5deg)}
+    .photo-wrap img{display:block;width:100%;max-height:76vh;object-fit:cover;border-radius:30px;box-shadow:0 24px 70px rgba(0,0,0,.43)}
+    .message{padding:34px;border-radius:30px;background:rgba(4,37,51,.47);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(11px);box-shadow:0 20px 60px rgba(0,0,0,.26)}
+    .message span{display:inline-flex;align-items:center;justify-content:center;width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.92);color:#0f3540;font-weight:700;margin-bottom:18px;box-shadow:0 8px 20px rgba(0,0,0,.18)}
+    .message p{font-size:clamp(1.35rem,3vw,2.55rem);line-height:1.35;margin:0;text-shadow:0 3px 16px rgba(0,0,0,.30)}
+    .final{min-height:100vh;display:grid;place-items:center;text-align:center;padding:36px 20px}
+    .final-card{max-width:900px;padding:42px 28px;border-radius:34px;background:rgba(0,0,0,.38);border:1px solid rgba(255,255,255,.27);backdrop-filter:blur(10px)}
+    .final h2{font-family:'Great Vibes',cursive;font-size:clamp(4rem,10vw,8.5rem);line-height:.92;margin:0 0 18px}
+    .final p{font-size:clamp(1.2rem,3vw,2rem);line-height:1.5;margin:0;color:#fff7e8}
+    .reveal{opacity:0;transform:translateY(70px) scale(.98);transition:opacity .95s ease,transform .95s ease}
+    .reveal.active{opacity:1;transform:translateY(0) scale(1)}
+    @media (max-width:780px){.hero-card{padding:18px;border-radius:24px}.story,.story.reverse{grid-template-columns:1fr;gap:24px;padding:64px 18px}.story.reverse .photo-wrap,.story.reverse .message{order:initial}.message{padding:24px}.message span{width:48px;height:48px}.photo-wrap img{max-height:68vh}}
+  </style>
+</head>
+<body>
+  <div class="beach-bg"></div><div class="waves"></div>
+  <section class="hero">
+    <div class="hero-card reveal active">
+      <h1>Para el amor de mi vida</h1>
+      <p class="subtitle">Un recorrido por nuestra historia, nuestros sueños y la familia hermosa que Dios nos regaló.</p>
+      <img src="images/image24.jpg" alt="Inicio">
     </div>
-  );
-}
+  </section>
+  <section class="story reveal">
+    <div class="photo-wrap"><img src="images/image24.jpg" alt="Recuerdo 1"></div>
+    <div class="message"><span>01</span><p>Amor cómo estas? Se que estas un poco cansada y a veces no quieres ni verme en pintura, pero quiero contarte algo y que no olvides como empezamos</p></div>
+  </section>
+  <section class="story reveal reverse">
+    <div class="photo-wrap"><img src="images/image2.jpg" alt="Recuerdo 2"></div>
+    <div class="message"><span>02</span><p>Quiero que recuerdes esas salidas cuando teníamos poco pero algo que jamas a faltado en nuestra relación: Amor y confianza desde el primer dia, que empezamos a recorrer caminos de la mano de Dios sin saber aún lo tanto que el nos ama</p></div>
+  </section>
+  <section class="story reveal">
+    <div class="photo-wrap"><img src="images/image15.jpg" alt="Recuerdo 3"></div>
+    <div class="message"><span>03</span><p>Recuerda que empezamos a viajar y conocer juntos cosas nuevas</p></div>
+  </section>
+  <section class="story reveal reverse">
+    <div class="photo-wrap"><img src="images/image9.jpg" alt="Recuerdo 4"></div>
+    <div class="message"><span>04</span><p>Y sin pensarlo, luego permitiste que fuéramos no 1 ni 2 sino 3,</p></div>
+  </section>
+  <section class="story reveal">
+    <div class="photo-wrap"><img src="images/image5.jpg" alt="Recuerdo 5"></div>
+    <div class="message"><span>05</span><p>Y recuerda como poco a poco salimos un poco mas lejos, y mas lejos</p></div>
+  </section>
+  <section class="story reveal reverse">
+    <div class="photo-wrap"><img src="images/image14.jpg" alt="Recuerdo 6"></div>
+    <div class="message"><span>06</span><p>y un dia empezamos a soñar juntos con muchos planes y nuevas cosas en nuestras vidas, empezamos a mejorar en todo aspecto y pudimos disfrutar cosas juntos y veníamos pensando y sintiendo por la obra de Dios que cosas que veíamos imposibles, ya no lo eran y entonces…….</p></div>
+  </section>
+  <section class="story reveal">
+    <div class="photo-wrap"><img src="images/image4.jpg" alt="Recuerdo 7"></div>
+    <div class="message"><span>07</span><p>en un abrir y cerrar de ojos, estabamos esperando a nuestra hermosa bebe, y sentimos un amor tan único y sentimientos increíbles, y entonces sucedio!!</p></div>
+  </section>
+  <section class="story reveal reverse">
+    <div class="photo-wrap"><img src="images/image7.jpg" alt="Recuerdo 8"></div>
+    <div class="message"><span>08</span><p>sin pensarlo, y en un abrir y cerrar de ojos tenias ese pequeña niña mirándote y recordándote a ti la gran madre que eres y a mi a la gran esposa que Dios me regaló</p></div>
+  </section>
+  <section class="story reveal">
+    <div class="photo-wrap"><img src="images/image20.jpg" alt="Recuerdo 9"></div>
+    <div class="message"><span>09</span><p>y entonces dijimos y sentimos, que esto debía ser honorable para Dios y nos unimos en alma y cuerpo, para hacer la obra de Dios real, ser una familia y. te digo algo</p></div>
+  </section>
+  <section class="story reveal reverse">
+    <div class="photo-wrap"><img src="images/image22.jpg" alt="Recuerdo 10"></div>
+    <div class="message"><span>10</span><p>no somos perfectos pero tu transmites una tranquilidad y te veo y cada dia te amo mas…</p></div>
+  </section>
+  <section class="story reveal">
+    <div class="photo-wrap"><img src="images/image16.jpg" alt="Recuerdo 11"></div>
+    <div class="message"><span>11</span><p>veo esa mujer con esa mirada profunda, que transmite belleza y fuerza, y contigo siento que quiero y puedo todo</p></div>
+  </section>
+  <section class="story reveal reverse">
+    <div class="photo-wrap"><img src="images/image21.jpg" alt="Recuerdo 12"></div>
+    <div class="message"><span>12</span><p>y por eso Dios nos regaló una de las primeras metas y algo que soñabas y un dia tristes pensábamos que no sería pero de repente paso y aún no veíamos que todo era por Dios, aun estabamos viendo los problemas, y no lo que Dios estaba preparando</p></div>
+  </section>
+  <section class="story reveal">
+    <div class="photo-wrap"><img src="images/image6.jpg" alt="Recuerdo 13"></div>
+    <div class="message"><span>13</span><p>continuamos nuestro camino como familia con sueños y creciendo en todos los aspectos, viendo a nuestros niños crecer y en nuevas tierras</p></div>
+  </section>
+  <section class="story reveal reverse">
+    <div class="photo-wrap"><img src="images/image8.jpg" alt="Recuerdo 14"></div>
+    <div class="message"><span>14</span><p>Para vivir momentos juntos y recordarnos algo importante</p></div>
+  </section>
+  <section class="story reveal">
+    <div class="photo-wrap"><img src="images/image1.jpg" alt="Recuerdo 15"></div>
+    <div class="message"><span>15</span><p>Somos tu y yo…</p></div>
+  </section>
+  <section class="story reveal reverse">
+    <div class="photo-wrap"><img src="images/image3.jpg" alt="Recuerdo 16"></div>
+    <div class="message"><span>16</span><p>pero lo mas importante, nuestros niños… la razón de ser de nosotros</p></div>
+  </section>
+  <section class="story reveal">
+    <div class="photo-wrap"><img src="images/image23.jpg" alt="Recuerdo 17"></div>
+    <div class="message"><span>17</span><p>siiiii!!! ellos los que se molestan pero su esencia es tan pura y tan perfecta que siento que no puedo tener una familia mejor, porque Dios me regaló la perfección en cada uno de ustedes</p></div>
+  </section>
+  <section class="story reveal reverse">
+    <div class="photo-wrap"><img src="images/image18.jpg" alt="Recuerdo 18"></div>
+    <div class="message"><span>18</span><p>acuérdate cuando estábamos asi juntos.</p></div>
+  </section>
+  <section class="story reveal">
+    <div class="photo-wrap"><img src="images/image19.png" alt="Recuerdo 19"></div>
+    <div class="message"><span>19</span><p>y un día mas sueños logramos juntos! gracias a nuestro amado Padre y sabes…</p></div>
+  </section>
+  <section class="story reveal reverse">
+    <div class="photo-wrap"><img src="images/image12.jpg" alt="Recuerdo 20"></div>
+    <div class="message"><span>20</span><p>No olvides para donde vamos, un paso a la vez… se que queremos muchas cosas pero lograremos todo en el tiempo de Dios.</p></div>
+  </section>
+  <section class="story reveal">
+    <div class="photo-wrap"><img src="images/image17.jpg" alt="Recuerdo 21"></div>
+    <div class="message"><span>21</span><p>Pero con el regalo mas grande de todos y que todos los dias debemos agradecer a Dios y es que estamos juntos para todo, y falta poco y llegará pronto este día que estemos recibiendo otra de las muchas bendiciones que Dios nos tiene</p></div>
+  </section>
+  <section class="story reveal reverse">
+    <div class="photo-wrap"><img src="images/image10.jpg" alt="Recuerdo 22"></div>
+    <div class="message"><span>22</span><p>Pero mientras tanto vivamos el hoy felices y unidos, y perdóname las mil rabias que te pueda sacar, pero recuerda que Te amo con mi vida a ti y a nuestros niños, nuestra familia mi amor</p></div>
+  </section>
+  <section class="story reveal">
+    <div class="photo-wrap"><img src="images/image13.jpg" alt="Recuerdo 23"></div>
+    <div class="message"><span>23</span><p>Feliz dia de la Madre</p></div>
+  </section>
+  <section class="story reveal reverse">
+    <div class="photo-wrap"><img src="images/image11.jpg" alt="Recuerdo 24"></div>
+    <div class="message"><span>24</span><p>Eres la mejor madre y esposa del mundo, amor Mio…</p></div>
+  </section>
+  <section class="final reveal">
+    <div class="final-card">
+      <h2>Te amo infinitamente ❤️</h2>
+      <p>Gracias por cada momento, cada sueño y cada paso que hemos dado juntos.</p>
+    </div>
+  </section>
+  <script>
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{ if(entry.isIntersecting) entry.target.classList.add('active'); });
+    },{threshold:.18});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
